@@ -22,7 +22,7 @@ class MahasiswaController extends Controller
             $query->where('nama', 'like', '%' . $request->search . '%');
         }
         
-        // Ambil data dengan pagination (opsional)
+        // Ambil data dengan pagination 
         $mahasiswas = $query->paginate(10)->withQueryString();
         
         // Hitung total data
